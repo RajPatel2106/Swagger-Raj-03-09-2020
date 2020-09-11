@@ -1,4 +1,4 @@
-﻿namespace Swashbuckle.AspNetCore.Swagger
+﻿6namespace Swashbuckle.AspNetCore.Swagger
 {
     internal class Contact
     {
