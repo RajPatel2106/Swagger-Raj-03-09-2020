@@ -10,13 +10,13 @@ namespace authJwtApi.Controllers
     [Route("api/[controller]")]
     [ApiController]
     public class ValuesController : ControllerBase
-    {
-        IEnumerable<Book> books = new Book[] { };
-
+    {        
         // GET api/values
         [HttpGet, Authorize]
         public IEnumerable<Book> Get() 
         {
+            IEnumerable<Book> books = new Book[] { };
+
             var currentUser = HttpContext.User;
             var resultBookList = new Book[]
             {
@@ -40,11 +40,7 @@ namespace authJwtApi.Controllers
         // POST api/values
         [HttpPost]
         public void Post(string value, string val)
-        {
-            //IList<Book> it = new Book[] { new Book { Author = "Ray Bradbury", Title = "Fahrenhit 451" } };
-            //var st = new Book[] { };
-            books.ToList().Add(new Book { Author = value, Title = val });
-            
+        {            
         }
 
         // PUT api/values/5
